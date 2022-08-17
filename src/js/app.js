@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as slFunctions from './modules/Slider/slider.js';
 import * as animFunctions from './modules/Animation/Animation.js';
 
+
 let scene,
     light,
     camera,
@@ -68,8 +69,8 @@ balloons.mesh.position.y = -0.8;
 
 loader = new THREE.TextureLoader();
 
-const blue = loader.load('img/canvas/blur-1.png');
-const yellow = loader.load('img/canvas/blur-2.png');
+const blue = loader.load('..dist/img/canvas/blur-1.png');
+const yellow = loader.load('..dist/img/canvas/blur-2.png');
 
 const blueGeometry = new THREE.BufferGeometry;
 const yellowGeometry = new THREE.BufferGeometry;
