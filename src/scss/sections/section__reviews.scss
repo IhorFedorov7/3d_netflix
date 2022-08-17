@@ -1,0 +1,440 @@
+.section {
+    &__reviews-title h2 {
+        font-weight: 400;
+        font-size: 68px;
+    }
+
+    &__reviews-content {
+        margin-top: 8%;
+    }
+
+    &__reviews-header {
+        display: grid;
+        grid-template-columns: 66% 34%;
+    }
+
+    &__reviews-statistics {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    // &__reviews-block {
+
+    // }
+
+    &__reviews-block-head {
+        margin-top: 8%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    &__reviews-block-btn {
+        margin-top: 4%;
+        .btn__stroke {
+            font-weight: 400;
+        }
+    }
+
+    &__reviews-btn .btn__stroke {
+        margin-top: 8%;
+        min-width: 100%;
+        color: #BC5555;
+        border: 3px solid #BC5555; 
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    .reviews {
+        // &__header-statistics {
+            
+        // }
+
+        &__header-progres {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__header-stars {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 40px;
+            }
+        }
+
+        &__stars-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+
+            svg {
+                width: 60px;
+                height: 60px;
+            }
+
+            h2 {
+                font-size: 80px;
+            }
+        }
+
+        &__stars-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 32px;
+            border: 4px solid #BC5555;
+            border-radius: 10px;
+
+            .info__head {
+                display: flex;
+                align-items: center;
+
+                h3 {
+                    font-weight: 700;
+                    margin-left: 20px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        &__head-stars {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 4%;
+                width: 60px;
+                height: 60px;
+            }
+
+            svg:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__head-user, &__block-type {
+            hr {
+                height: 31px;
+                width: 2px;
+                border: 0;
+                background: #3B3B3B;
+            }
+        }
+
+        &__head-user {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            h4 {
+                font-weight: 400;
+                font-size: 28px;
+                color: #3B3B3B;
+            }
+
+            hr {
+                margin: auto 4%;
+            }
+        }
+
+        &__block-type {
+            margin-top: 2%;
+            display: flex;
+            align-items: center;
+
+            p {
+                font-weight: 400;
+                font-size: 20px;
+                color: #3B3B3B;
+            }
+
+            hr {
+                margin: auto 2%;
+            }
+        }
+
+        &__block-content {
+            margin-top: 8%;
+
+            p {
+                font-weight: 400;
+                font-size: 28px;
+            }
+        }
+    }
+
+    .progres__stars p {
+        color: #3B3B3B;
+    }
+
+    .progres__stars div {
+        display: flex;
+
+        h4 {
+            width: 4%;
+            font-size: 24px;
+            color: #717171;
+            margin-right: 16px;
+        }
+    }
+
+    .progres-bar, .progres {
+        height: 24px;
+        border-radius: 50px;
+    }
+
+    .progres-bar {
+        width: 100%;
+        background: #CDCDCD;
+        margin-bottom: 3%;
+    }
+
+    .progres {
+        width: 80%;
+        background: #BC5555;
+    }
+}
+
+@media (max-width: 1680px) {
+    .section {
+
+        .reviews {
+            &__header-stars {
+    
+                p {
+                    font-size: 20px;
+                }
+            }
+    
+            &__stars-head {
+                svg {
+                    width: 50px;
+                    height: 50px;
+                }
+    
+                h2 {
+                    font-size: 60px;
+                }
+            }
+    
+            &__stars-info {
+                padding: 24px;
+    
+                .info__head {
+                    h3 {
+                        margin-left: 16px;
+                    }
+                }
+    
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .progres__stars div {
+            h4 {
+                font-size: 18px;
+                margin-right: 16px;
+            }
+        }
+
+        .progres-bar, .progres {
+            height: 16px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .section {
+        &__reviews-title h2 {
+            font-size: 40px;
+        }
+
+        &__reviews-statistics {
+            grid-template-columns: 70% 30%;
+        }
+
+        &__reviews-header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__reviews-block-btn {
+            .btn__stroke {
+                padding: 10px 60px;
+                font-size: 18px;
+            }
+        }
+
+        .reviews {
+            &__stars-info {
+                padding: 4% 8%;
+                margin-top: 4%;
+
+                p {
+                    margin-top: 4%;
+                }
+            }
+
+            &__stars-head {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+    
+                h2 {
+                    font-size: 52px;
+                }
+            }
+
+            &__head-stars {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            
+            &__head-user, &__block-type {
+                hr {
+                    height: 22px;
+                }
+            }
+    
+            &__head-user {
+                h4 {
+                    font-size: 20px;
+                }
+            }
+    
+            &__block-type {
+    
+                p {
+                    font-size: 16px;
+                }
+            }
+    
+            &__block-content {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .progres__stars div {
+            h4 {
+                font-size: 14px;
+                margin-right: 8px;
+            }
+        }
+
+        .progres-bar, .progres {
+            height: 12px;
+        }
+
+        .comments {
+            hr {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .section {
+        &__reviews-title h2 {
+            font-size: 28px;
+        }
+
+        &__reviews-statistics {
+            grid-template-columns: 60% 40%;
+        }
+
+        &__reviews-block-btn {
+            .btn__stroke {
+                max-width: 100%;
+            }
+        }
+
+        &__reviews-block-btn {
+            .btn__stroke {
+                padding: 10px 60px;
+                font-size: 14px;
+            }
+        }
+
+        &__reviews-btn .btn__stroke {
+            font-size: 20px;
+        }
+
+        .reviews {
+            &__stars-info {
+                padding: 4% 8%;
+                margin-top: 4%;
+
+                p {
+                    margin-top: 4%;
+                }
+            }
+
+            &__stars-head {
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+    
+                h2 {
+                    font-size: 38px;
+                }
+            }
+
+            &__head-stars {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &__header-stars {
+    
+                p {
+                    font-size: 14px;
+                }
+            }
+            
+            &__head-user, &__block-type {
+                hr {
+                    width: 1px;
+                    height: 18px;
+                }
+            }
+    
+            &__head-user {
+                h4 {
+                    font-size: 16px;
+                }
+            }
+    
+            &__block-type {
+                margin-top: 4%;
+                p {
+                    font-size: 12px;
+                }
+            }
+    
+            &__block-content {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

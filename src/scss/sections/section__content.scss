@@ -1,0 +1,224 @@
+.section {
+    &__services-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__services-title h2 {
+        font-weight: 400;
+        font-size: 68px;
+    }
+
+    &__services-tab {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin-top: 40px;
+    }
+
+    .services__btn {
+        margin-bottom: 32px;
+    }
+
+    .btn__stroke {
+        color: #9A9A9A;
+        border: 3px solid #9A9A9A;
+    }
+
+    &__services-tab .btn__stroke.active {
+        background: #9A9A9A;
+        color: #FFFFFF;
+    }
+
+    &__services-tab button {
+        padding: 5px 20px;
+        font-weight: 400;
+        width: 100%;
+    }
+    
+    &__service {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    &__service:last-child {
+        margin-bottom: 0;
+    }
+
+    &__services-content {
+        .tabs__item {
+            display: none;
+        }
+
+        .tabs__item.active {
+            display: block;
+        }
+    }
+
+    .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__name h3 {
+            margin-bottom: 10px;
+        }
+        
+        &__name h3, &__price h3 {
+            font-size: 28px;
+        }
+
+        &__btn {
+            margin-left: auto;
+        }
+        
+        &__btn-mob {
+            display: none;
+        }
+
+        &__btn .btn__stroke {
+            color: #BC5555;
+            border: 3px solid #BC5555;
+        }
+
+        &__btn .btn__stroke:active {
+            background: #BC5555;
+            color: #FFFFFF;
+        }
+
+        &__btn button {
+            font-weight: 400;
+            font-size: 20px;
+            padding: 5px 40px;
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .section {
+        &__service {
+            grid-template-columns: 65% 35%;
+        }
+
+        &__services-title h2 {
+            font-size: 60px;
+        }
+
+        &__services-tab button {
+            padding: 5px 10px;
+            width: 80%;
+        }
+
+        .services__btn {
+            margin-bottom: 24px;
+        }
+
+        .service {
+            &__name h3, &__price h3 {
+                font-size: 24px;
+            }
+
+            &__btn button {
+                font-size: 20px;
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .section {
+        &__services-title h2 {
+            font-size: 40px;
+        }
+
+        &__services-tab button {
+            font-size: 20px;
+        }
+        
+        &__service {
+            grid-template-columns: 85% 15%;
+        }
+
+        .service {
+            &__price h3, &__name h3 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                padding-left: 4px;
+            }
+
+            &__btn {
+                display: none;
+            }
+
+            &__btn-mob {
+                display: block;
+                margin-left: auto;
+            }
+
+            &__btn-mob button {
+                width: 18px;
+                height: 18px;
+                margin-right: 4px;
+                border: 0;
+                border-top: 2px solid #3B3B3B;
+                border-right: 2px solid #3B3B3B;
+                transform: rotate(45deg);
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .section {
+        &__services-title h2 {
+            font-size: 28px;
+        }
+
+        &__services-tab {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            margin-top: 20px;
+        }
+
+        &__services-tab button {
+            font-size: 14px;
+            width: 100%;
+        }
+
+        &__services-content {
+            margin-top: 12px;
+        }
+
+        .services__btn {
+            margin-bottom: 8px;
+            margin-right: 8px;
+        }
+
+        .services__btn:nth-child(3) {
+            margin-right: 0;
+        }
+
+        .service {
+            &__price h3, &__name h3 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 12px;
+                padding-left: 4px;
+            }
+
+            &__btn-mob button {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}

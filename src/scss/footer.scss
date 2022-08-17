@@ -1,0 +1,117 @@
+.footer {
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateX(50%);
+
+    .content__navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin-top: 42px;
+        align-items: center;
+
+        .sliders__nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 16%;
+        }
+
+        #btn-prev {
+            transform: rotate(180deg);
+        }
+
+        #btn-next {
+            margin-left: 12%;
+        }
+
+        .btn__flooded  {
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            padding: 10px;
+            max-width: 50px;
+            border-radius: 50%;
+    
+            .arrow-hover {
+                cursor: pointer;
+                position: relative;
+                width: 16px;
+                height: 24px;
+            }
+            
+            .arrow-hover div::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 3px;
+                background-color: #FFFFFF;
+                border-radius: 5px;
+                transform: rotate(45deg);
+                top: calc(50% - 7px);
+            }
+            .arrow-hover div::before {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 3px;
+                background-color: #FFFFFF;
+                border-radius: 5px;
+                transform: rotate(-45deg);
+                top: calc(50% + 4px);
+            }
+        }
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 144.52%;
+
+        color: #FFFFFF;
+    }
+
+    &__sliders {
+        display: flex;
+        align-items: center;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        margin-top: 20px;
+        
+
+        .sliders__content {
+            overflow: hidden;
+        }
+    
+        .sliders__imeges {
+            display: flex;
+            transition: 2s;
+        }
+    
+        .slide {
+            width: 150px;
+            // height: 210px;
+        }
+
+        .slide:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+
+        .content__navigation {
+            width: 100%;
+
+            .sliders__nav {
+                display: none;
+            }
+        }
+
+        &__sliders {
+            width: 80%;
+        }
+    }
+}

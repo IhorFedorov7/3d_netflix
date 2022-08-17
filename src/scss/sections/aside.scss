@@ -1,0 +1,277 @@
+aside {
+    background: #E9E9E9;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.aside {
+    &__info {
+        padding: 32px 40px;
+    }
+
+    &__working-time, &__contact, &__social-networks {
+        margin-top: 54px;
+    }
+
+    &__addresses-info, &__working-time-info, &__contact-info {
+        display: grid;
+        align-items: center;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    &__addresses-info, &__working-time-info {
+        grid-template-columns: 10% 80% 10%;
+    }
+
+    &__addresses-content, &__working-time-content {
+        width: 80%;
+        margin: 32px auto 0;
+        padding: 0;
+        li {
+            font-size: 18px;
+            margin-bottom: 32px;
+            color: #717171;
+            list-style-type: none;
+        }
+
+        li:last-child {
+            margin: 0;
+        }
+
+        li .link {
+            color: #267CD7;
+        }
+    }
+
+    &__addresses-content[aria-hidden="false"], &__working-time-content[aria-hidden="false"] {
+        display: none;
+    }
+
+    &__addresses-content[aria-hidden="true"], &__working-time-content[aria-hidden="true"] {
+        display: block;
+    }
+
+
+    &__social-networks-info {
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &__addresses-info, &__working-time-info, &__contact-info, &__social-networks-info {
+        margin-top: 42px;
+    }
+
+    &__addresses-info {
+        p .link {
+            color: #267CD7;
+        }
+    }
+
+    &__working-time-info {
+        p .link {
+            color: #47C53C;
+        }
+    }
+    
+    &__contact-info {
+        grid-template-columns: 10% 45% 45%;
+    }
+
+    &__addresses-btn, &__working-time-btn, &__contact-btn {
+        margin-left: auto;
+    }
+
+    &__addresses-btn button, &__working-time-btn button {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+        border: 0;
+        border-top: 4px solid #717171;
+        border-right: 4px solid #717171;
+        transform: rotate(135deg);
+        padding: 0;
+    }
+
+    &__addresses-btn.open button, &__working-time-btn.open button {
+        transform: rotate(-45deg);
+    }
+
+    &__contact-btn {
+        .btn__stroke {
+            color: #BC5555;
+            border: 3px solid #BC5555;
+        }
+
+        .btn__stroke:active {
+            background: #BC5555;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.accordion {
+    cursor: pointer;
+}
+
+@media (max-width: 1680px) {
+    .aside {
+        &__addresses-info, &__working-time-info, &__contact-info {
+            p {
+                font-size: 16px;
+            }
+
+            svg {
+                width: 36px;
+                height: 36px;  
+            }
+        }
+
+        &__addresses-content, &__working-time-content {
+            width: 70%;
+            margin: 22px auto 0;
+            li {
+                font-size: 16px;
+                margin-bottom: 22px;
+            }
+        }
+
+        &__addresses-info, &__working-time-info {
+            grid-template-columns: 15% 70% 15%;
+        }
+
+        &__contact-info {
+            grid-template-columns: 15% 45% 40%;
+        }
+
+        &__social-networks-info {
+            svg {
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1325px) {
+    .aside {
+        &__info {
+            padding: 16px 20px;
+        }
+
+        &__addresses-info, &__working-time-info, &__contact-info {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        &__addresses-content, &__working-time-content {
+            width: 70%;
+
+            li {
+                font-size: 14px;
+            }
+        }
+
+        &__addresses-info, &__working-time-info {
+            grid-template-columns: 15% 70% 15%;
+        }
+
+        &__addresses-btn button, &__working-time-btn button {
+            border-top: 2px solid #717171;
+            border-right: 2px solid #717171;
+        }
+
+        &__contact-info {
+            grid-template-columns: 15% 45% 40%;
+
+        }
+        
+        &__contact-btn button {
+            font-size: 20px;
+        }
+
+        &__social-networks-info {
+            svg {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    aside {
+        background: #FFFFFF;
+        border-radius: 0;
+
+        .mob {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+        }
+    }
+
+    .aside {
+        &__addresses-title, &__working-time-title, &__contact-title, &__social-networks-title, &__contact-btn {
+            display: none;
+        }
+
+        &__addresses-info, &__working-time-info {
+            grid-template-columns: 10% 80% 10%;
+        }
+
+        &__contact-info {
+            grid-template-columns: 20% 80%;
+        }
+
+        &__addresses-content, &__working-time-content {
+            width: 80%;
+            margin: 12px auto 0;
+
+            li {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 660px) {
+    .aside {
+        &__info {
+            padding: 16px 12px;
+        }
+
+        &__addresses-info, &__working-time-info, &__contact-info, &__social-networks-info {
+            margin-top: 8px;
+
+            button {
+                width: 12px;
+                height: 12px;
+                margin-bottom: 8px;
+            }
+
+            svg {
+                width: 26px;
+                height: 26px;  
+            }
+        }
+
+        &__working-time, &__contact, &__social-networks {
+            margin-top: 12px;
+        }
+
+        &__social-networks-info {
+            svg {
+                width: 20px;
+                height: 20px;  
+            }
+        }
+    }
+}
