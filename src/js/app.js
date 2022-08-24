@@ -44,8 +44,8 @@ camera.position.y = 0;
 scene.add(camera);
 
 // Controls
-// const controls = new OrbitControls(camera, canvas);
-// controls.enableDamping = true;
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
 
 // renderer setup
 renderer = new THREE.WebGLRenderer({
@@ -68,9 +68,9 @@ balloons.mesh.position.x = 2;
 balloons.mesh.position.y = -0.8;
 
 loader = new THREE.TextureLoader();
-
-const blue = loader.load('../dist/img/canvas/blur-1.png');
-const yellow = loader.load('../dist/img/canvas/blur-2.png');
+// ../dist/
+const blue = loader.load('../img/canvas/blur-1.png');
+const yellow = loader.load('../img/canvas/blur-2.png');
 
 const blueGeometry = new THREE.BufferGeometry;
 const yellowGeometry = new THREE.BufferGeometry;
@@ -149,6 +149,8 @@ const animate = () => {
     
     balloons.mesh.rotation.y += 0.003;
     blueMech.rotation.x = mouseX * (0.00008); 
+    blueMech.rotation.y = mouseX * (0.00008); 
+    yellowMech.rotation.x = mouseY * (0.00008);
     yellowMech.rotation.y = mouseY * (0.00008);
 
     requestAnimationFrame(animate);

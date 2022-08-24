@@ -28,6 +28,7 @@ body
     top: 0;
     right: -15%;
     outline: none;
+    z-index: 1;
 }
 
 .container {
@@ -71,6 +72,7 @@ button {
 .btn {
     text-align: center;
     transform: translateY(50%);
+    z-index: 1002;
 
     &__stroke {
         display: flex;
@@ -127,6 +129,7 @@ button {
 
     .webgl {
         right: 0;
+        z-index: 0;
     }
 
     .btn {

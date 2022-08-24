@@ -137,8 +137,6 @@
 }
 .footer {
   margin-top: 10px;
-  opacity: 0;
-  transform: translateX(-10%);
 }
 .footer .content__navigation {
   display: flex;
@@ -208,10 +206,11 @@
 }
 .footer__sliders .sliders__content {
   overflow: hidden;
+  z-index: 1002;
 }
 .footer__sliders .sliders__imeges {
   display: flex;
-  transition: 2s;
+  transition: 0.5s;
 }
 .footer__sliders .slide {
   width: 150px;
@@ -254,6 +253,7 @@ body {
   top: 0;
   right: -15%;
   outline: none;
+  z-index: 1;
 }
 
 .container {
@@ -296,6 +296,7 @@ button {
 .btn {
   text-align: center;
   transform: translateY(50%);
+  z-index: 1002;
 }
 .btn__stroke {
   display: flex;
@@ -347,6 +348,7 @@ button {
 
   .webgl {
     right: 0;
+    z-index: 0;
   }
 
   .btn {
