@@ -68,9 +68,9 @@ balloons.mesh.position.x = 2;
 balloons.mesh.position.y = -0.8;
 
 loader = new THREE.TextureLoader();
-// ../../dist/
-const blue = loader.load('../../dist/img/canvas/blur-1.png');
-const yellow = loader.load('../../dist/img/canvas/blur-2.png');
+// ./../dist/
+const blue = loader.load('./../dist/img/canvas/blur-1.png');
+const yellow = loader.load('./../dist/img/canvas/blur-2.png');
 
 const blueGeometry = new THREE.BufferGeometry;
 const yellowGeometry = new THREE.BufferGeometry;
