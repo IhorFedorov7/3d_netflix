@@ -58,6 +58,7 @@
 }
 .section {
   margin-top: 64px;
+  max-width: 800px;
 }
 .section__content .content__type {
   display: flex;
@@ -72,13 +73,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
 }
 .section__content .content__info hr {
   height: 18px;
 }
 .section__content .content__description {
-  width: 38%;
   margin: 18px 0;
 }
 .section__content .content__description p {
@@ -242,7 +241,7 @@ body {
 }
 
 #app > div {
-  height: 200vh;
+  height: 120vh;
   display: flex;
   align-content: space-between;
   justify-content: center;
@@ -258,7 +257,7 @@ body {
 
 .container {
   position: absolute;
-  width: 94%;
+  z-index: 4;
 }
 
 h1, h2, h3, p {
